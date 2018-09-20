@@ -48,7 +48,7 @@ It is possible to convert the logical and factor variables to numeric variables.
 ```{r p1_convertchar, results = FALSE}
 as.numeric(as.factor(set_a$vec_char))
 ```
-The character variable can successfully be converted to factor and numeric. Factors are stored as a vector of numeric values and a corresponding set of character values. As such, it is possible for character variables can be converted to factors due to the factor variable's character values. From here, factors can be converted to numeric variables via the factor variable's integer values.
+The character variable can successfully be converted to factor and then numeric. Factors are stored as a vector of numeric values and a corresponding set of character values. As such, it is possible for character variables can be converted to factors due to the factor variable's character values. From here, factors can be converted to numeric variables via the factor variable's integer values.
 
 #### Convert factor variable from factor to character to numeric:
 ```{r p1_convertfactor, results = FALSE}
