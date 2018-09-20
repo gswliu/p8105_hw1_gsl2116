@@ -1,6 +1,6 @@
 ---
-title: "p8105_hw1_gsl2116"
-author: "Grace Liu"
+title: "P8105 Homework 1"
+author: "Grace Liu (gsl2116)"
 date: "9/21/2018"
 output: github_document
 ---
@@ -42,18 +42,19 @@ as.numeric(set_a$vec_logic)
 as.numeric(set_a$vec_char)
 as.numeric(set_a$vec_factor)
 ```
-
+It is possible to convert the logical and factor variables to numeric variables. This is because logical variables have numeric values attributed to them (True = 1, False = 0), and factor variables have both character and numerical values associated with them.
 
 #### Convert character variable from character to factor to numeric:
 ```{r p1_convertchar, results = FALSE}
 as.numeric(as.factor(set_a$vec_char))
 ```
-
+The character variable can successfully be converted to factor and numeric. Factors are stored as a vector of numeric values and a corresponding set of character values. As such, it is possible for character variables can be converted to factors due to the factor variable's character values. From here, factors can be converted to numeric variables via the factor variable's integer values.
 
 #### Convert factor variable from factor to character to numeric:
 ```{r p1_convertfactor, results = FALSE}
 as.numeric(as.character(set_a$vec_factor))
 ```
+The factor variable can be converted to a character variable, but from here it can *not* be converted to a numeric variable. It is possible for factor variables can be converted to characters due to the factor variable's character values. However, character variables do not have any numeric values and thus the conversion from character to numeric is unsuccessful.
 
 ## Problem 2
 
@@ -78,5 +79,10 @@ This dataset has `r nrow(plot_data)` rows and `r ncol(plot_data)` columns. The m
 #### Scatterplot of x and y
 ```{r}
 ggplot(plot_data, aes(x = x, y = y, color = plot_logic)) + geom_point()
+```
+
+#### Save scatterplot as image
+```{r}
+ggsave("p8105_hw1_graph.png")
 ```
 
